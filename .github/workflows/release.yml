@@ -84,5 +84,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Upload all packaged files from the release-assets directory
-          gh release upload ${{ steps.get_tag.outputs.tag }} release-assets/*
+          gh release upload ${{ steps.get_tag.outputs.tag }} -- release-assets/*
 
